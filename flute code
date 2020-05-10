@@ -1,0 +1,311 @@
+#include <SoftwareServo.h>
+
+float x1,x2,x3,x4,x5,x6,y1,y2=0;   // Servo positions in anlge- x for holes and y for blow tube
+float set1,set2,set3,set4,set5,set6,set7,set8=0;   //instateneous value to write on servo
+float pre1,pre2,pre3,pre4,pre5,pre6,pre7,pre8=0;   // last executed p() function servo value 
+SoftwareServo h1,h2,h3,h4,h5,h6,b1,b2; //defining servos
+int E,F,Fs,G,Gs,A,As,B,C,Cs,D,Ds,E2,F2,Fs2,G2,Gs2,a2,As2,B2,note,tempo;   //various notes as integer
+
+
+void setup() {
+h1.attach(3);
+h2.attach(6);
+h3.attach(10);
+h4.attach(11);
+h5.attach(9);
+h6.attach(5);
+b1.attach(13);
+b2.attach(4);
+Serial.begin(250000);
+
+E=1; F=2; Fs=3; G=4; Gs=5; A=6; As=7;
+B=8; C=9; Cs=10; D=11; Ds=12; E2=13;       //giving a unique number to every note
+F2=14; Fs2=15; G2=16; Gs2=17; a2=18;
+As2=19;
+pre7=50;pre8=75;
+/*
+
+ Sa=1; Re=3; re=2; Ga=5; ga=4; Ma=6; ma=7; Pa=8; Dha=10; dha=9;
+ Ni=11; ni=10; Sa2=12; Re2=14; re2=13; Ga2=16; ga2=15;
+void pvol(int freq, float duration,float amp)
+void pVibr(int note, int ref_note, float duration,float freq)
+  
+ */ 
+
+}
+
+void loop() 
+//-------------------------------Music here------------------------------------------------//
+{
+
+
+//Tianic Theme//
+
+//intro
+p(A,tempo*8,20);p(B,tempo*8,40);p(Cs,tempo*36,20);p(B,tempo*8,40);p(A,tempo*8,40);p(B,tempo*12,30);p(E2,tempo*24,10);
+p(D,tempo*8,20);p(Cs,tempo*7,20);p(A,tempo*12,20);p(Fs,tempo*40,30);p(E,tempo*32,20);
+p(A,tempo*6,20);p(B,tempo*6,20);p(Cs,tempo*40,20);p(D,tempo*4,20);p(Cs,tempo*4,20);p(B,tempo*4,20);
+p(A,tempo*4,20);p(B,tempo*4,40);p(E2,tempo*26,20);p(Cs,tempo*6,20);p(E2,tempo*16,20);p(Fs2,tempo*24,20);p(E2,tempo*24,20);
+p(Cs,tempo*12,20);p(B,tempo*24,20);
+mvol(0,1000);
+
+//main
+p(A,tempo*20-60,20); mvol(0,60);p(A,tempo*8-40,20); mvol(0,40);p(A,tempo*13-60,20); mvol(0,60);p(A,tempo*14-60,20); mvol(0,60); 
+p(Gs,tempo*12,20);p(A,tempo*24,20);p(A,tempo*12,20);p(Gs,tempo*12,20);
+p(A,tempo*24,20);p(B,tempo*12,20);p(Cs,tempo*24,20);p(B,tempo*24,20);
+p(A,tempo*20-60,20); mvol(0,60);p(A,tempo*8-40,20); mvol(0,40);p(A,tempo*13-60,20); mvol(0,60);p(A,tempo*14-60,20); mvol(0,60);
+p(Gs,tempo*12,20);p(A,tempo*24,20);p(A,tempo*12,20);p(E,tempo*56,20);
+p(E,tempo*8,20);p(Fs,tempo*8,20);p(Gs,tempo*8,20); 
+p(A,tempo*20-60,20); mvol(0,60);p(A,tempo*8-40,20); mvol(0,40);p(A,tempo*13-60,20); mvol(0,60);p(A,tempo*14-60,20); mvol(0,60);
+p(A,tempo*24,20);p(A,tempo*8,20);p(Gs,tempo*12,20);p(A,tempo*8,20);p(B,tempo*12,20);
+p(Cs,tempo*24,20);p(B,tempo*24,20);
+p(A,tempo*20-60,20); mvol(0,60);p(A,tempo*8-40,20); mvol(0,40);p(A,tempo*13-60,20); mvol(0,60);p(A,tempo*14-60,20); mvol(0,60);
+p(Gs,tempo*14,20);p(A,tempo*24,20);p(A,tempo*14,20);p(E,tempo*82,20);
+p(Fs,tempo*12,20);p(Gs,tempo*12,20);p(A,tempo*54,20);p(B,tempo*40,20);p(E,tempo*12,20);
+p(E2,tempo*24,20);p(D,tempo*12,20);p(Cs,tempo*12,20);p(B,tempo*24,20);p(Cs,tempo*12,20);
+p(D,tempo*12,20);p(Cs,tempo*28,20);p(B,tempo*12,20);p(A,tempo*12,20);p(Gs,tempo*16,20);
+p(A,tempo*24,20);p(Gs,tempo*12,20);p(Fs,tempo*56,20);
+p(E,tempo*24,20);p(E,tempo*24,20);p(A,tempo*56,20);
+p(B,tempo*36,20);p(E,tempo*12,20);p(E2,tempo*28,20);p(D,tempo*12,20);
+p(Cs,tempo*8,20);p(B,tempo*32,20);p(Cs,tempo*12,20);p(D,tempo*12,20);p(Cs,tempo*24,20);
+p(B,tempo*12,20);p(A,tempo*12,20);p(Gs,tempo*12,20);p(A,tempo*24,20);p(Gs,tempo*14,20);
+p(Gs,tempo*12,20);p(A,tempo*28,20);p(B,tempo*12,20);p(Cs,tempo*24,20);p(B,tempo*12,20);
+p(A,tempo*8,20);p(B,tempo*8,20);p(Cs,tempo*40,20);p(D,tempo*4,20);p(Cs,tempo*4,20);p(B,tempo*4,20);
+                                   p(A,tempo*4,20);p(B,tempo*12,20);p(E2,tempo*24,20);
+p(Cs,tempo*8,20);p(E2,tempo*8,20);p(Fs2,tempo*24,20);p(E2,tempo*24,20);p(B,tempo*54,20);p(A,tempo*54,20);
+
+
+mvol(0,60);
+delay(5000);
+
+
+}
+
+
+
+
+
+
+
+//-------------------------------FUNCTIONS------------------------------------------------//
+/* This is the program to for flute machine (latest as per 21-10-2018),
+ * link for details: 
+ * by Abhilash Patel, 
+ * contact: abhilshpatel121@gmail.com
+ */
+
+//1. setting  (value of all servo positions need to be defined for every note manually, these values changes as per setup)
+void data(int note)
+{
+        //where H6 is nearest point form hole
+  //-------------H1-----H2-----H3-----H4-----H5-----H6----y1/y2 pos--\\
+  
+if(note==1)   {x1=00; x2=00; x3=00; x4=00; x5=00; x6=00; y1=45; y2=75;} //E   +++ +++
+if(note==2)   {x1=20; x2=00; x3=00; x4=00; x5=00; x6=00; y1=50; y2=80;} //F
+if(note==3)   {x1=35; x2=00; x3=00; x4=00; x5=00; x6=00; y1=50; y2=75;} //Fs  -++ +++
+if(note==4)   {x1=40; x2=30; x3=00; x4=00; x5=00; x6=00; y1=90; y2=90;} //G
+if(note==5)   {x1=40; x2=50; x3=00; x4=00; x5=00; x6=00; y1=55; y2=75;} //Gs  --+ +++
+if(note==6)   {x1=00; x2=55; x3=35; x4=00; x5=00; x6=00; y1=55; y2=75;} //A   +-- +++
+if(note==7)   {x1=00; x2=50; x3=35; x4=29; x5=00; x6=00; y1=55; y2=75;} //As  
+if(note==8)   {x1=00; x2=00; x3=35; x4=45; x5=00; x6=00; y1=65; y2=75;} //B   ++- -++
+if(note==9)   {x1=00; x2=00; x3=35; x4=45; x5=22; x6=00; y1=55; y2=75;} //C   
+if(note==10)  {x1=00; x2=00; x3=00; x4=45; x5=40; x6=00; y1=65; y2=75;} //Cs  +++ --+
+if(note==11)  {x1=00; x2=00; x3=00; x4=45; x5=45; x6=30; y1=65; y2=75;} //D 
+if(note==12)  {x1=00; x2=00; x3=00; x4=50; x5=40; x6=50; y1=65; y2=75;} //Ds  +++ ---
+if(note==13)  {x1=00; x2=00; x3=00; x4=00; x5=00; x6=00; y1=70; y2=75;} //E2  +++ +++ o
+if(note==14)  {x1=25; x2=00; x3=00; x4=00; x5=00; x6=00; y1=75; y2=75;} //F2
+if(note==15)  {x1=40; x2=00; x3=00; x4=00; x5=00; x6=00; y1=69; y2=80;} //Fs2 -++ +++ o
+if(note==16)  {x1=40; x2=42; x3=00; x4=00; x5=00; x6=00; y1=75; y2=75;} //G2
+if(note==17)  {x1=40; x2=50; x3=00; x4=00; x5=00; x6=00; y1=75; y2=75;} //Gs2 --+ +++ o
+if(note==18)  {x1=40; x2=60; x3=40; x4=00; x5=00; x6=00; y1=77; y2=75;} //A2  +-- +++ o
+if(note==19)  {x1=50; x2=50; x3=00; x4=00; x5=00; x6=00; y1=90; y2=90;} //As2 
+
+}
+
+
+
+//1. to play note
+//Notes obviously the note you want to play,
+/*hold is the duration (in milliseconds) for which you want to play the tone, and
+ *attack is how smoothly or aggressively you want to achieve the tone. 
+ *value is direct stepping from one note to another, while 100 is a completely linear approach to the next tone over specified hold duration
+ */
+void p(int note, float hold,float attack)
+{ 
+Serial.println(note);
+data(note);
+
+float inc;
+inc=(hold*attack/(20*100));   //number of loop (of 20ms) for variation
+
+for(int i=0; i*19<hold; i++)
+    {
+
+       if(i*20<attack*hold/100)                      //updating the hole pos values
+        {  
+        set1=pre1+i*(x1-pre1)/inc; 
+        set2=pre2+i*(x2-pre2)/inc;
+        set3=pre3+i*(x3-pre3)/inc;
+        set4=pre4+i*(x4-pre4)/inc;
+        set5=pre5+i*(x5-pre5)/inc;
+        set6=pre6+i*(x6-pre6)/inc;
+        set7=pre7+i*(y1-pre7)/inc;
+        set8=pre8+i*(y2-pre8)/inc;
+         } 
+        else{set1=x1; set2=x2; set3=x3; set4=x4; set5=x5; set6=x6; set7=y1; set8=y2;}
+      
+          h1.write(set1);  // writing all servos
+          h2.write(set2);
+          h3.write(set3);
+          h4.write(set4);
+          h5.write(set5);
+          h6.write(set6);
+          b1.write(set7);
+          b2.write(set8);
+          delay(18);
+          SoftwareServo::refresh();
+    }
+
+pre1=x1; pre2=x2; pre3=x3; pre4=x4; pre5=x5; pre6=x6; pre7=y1; pre8=y2;
+}
+
+
+
+//2. for tone vibrato
+/*note - base note on which vibrato required,
+ *ref_note- oscillations between note and ref_note will occur,
+ *duration- in milliseconds,
+ *freq- frequency in Hz.
+ */
+void pVibr(int note, int ref_note, float duration,float freq)
+{
+  float Ncyc=duration*freq/1000;
+  float Tcyc=1000/freq;
+
+  for(int i=0; i<Ncyc; i++)
+    {
+      p(ref_note,3*Tcyc/4,100);
+     
+      p(note,Tcyc/4,100);
+     
+    }
+}
+
+
+//3. amplitude vibrato:
+/*freq- frequency in Hz
+ *duration- in milliseconds,
+ *Amp- amplitude of oscillation vibrato required.
+ */
+void pvol(int freq, float duration,float amp)
+{
+   for(int i=0;i*20<duration;i++)
+     {
+        b2.write(5+y2+amp*sin(6.28*freq*0.02*i));
+        delay(20);
+        SoftwareServo::refresh();
+     }
+     
+   b2.write(y2);
+}
+
+
+
+
+// 4. aplitude set: on and off
+/*
+ *type- 0 for OFF and 1 For ON,
+ *Hold: the amount of time (in milliseconds) to hold the condition.
+ */
+ 
+void mvol(int typ,int hold) 
+{
+  for(int i=0;i*20<hold;i++)
+    {
+      if(typ==1){b2.write(y2);}
+      if(typ==0){b2.write(y2+15);}
+      SoftwareServo::refresh();
+      delay(20);
+    }
+}
+//---------------------------------------------------tone detect ------------//
+/*this code detects note played near microphone,
+ * as of now it can only detect notes played very cleary near to mic connected to A0
+ * Output of this function is frequecy in Hz
+ * This part need to be further optimised for faster response and accurate detection
+ */
+
+float fRaw()
+{
+float a[210],sum,ave,ssum,rms,t1,t2,dt,f;
+sum=0; ssum=0;
+t1=micros();    
+for(int i=0;i<140;i++)
+    {
+      a[i]=analogRead(A0);
+      sum=sum+a[i];   
+    }
+t2=micros();
+dt=(t2-t1)/1000;
+ave=sum/140;
+
+for(int i=0;i<140;i++)
+    {
+      a[i]=a[i]-ave;
+      ssum=ssum+ a[i]*a[i];    
+    }
+    
+rms=ssum/200;
+
+for(int i=140;i>10;i--)
+  {
+  a[i]=40+(a[i-10]+a[i-9]+a[i-8]+a[i-7]+a[i-6]+a[i-5]+a[i-4]+a[i-3]+a[i-2]+a[i-1])/10;
+  }
+
+int s1,s2;
+s1=0;s2=0;f=0;
+if(rms>200)
+  {
+  for(int i=11;i<140;i++)
+     {  if(a[i]*a[i+1]<=0)
+          {  if (a[i]<a[i+1])
+                {     if(s1>10 && s2==0){s2=i;  }    
+                      if(s1<10)         {s1=i;  }                   
+                }                 
+          }
+     }
+
+  f=(s2-s1)*dt/140;
+  f=1000/f;
+  if(f<350 || f>90){return f;}
+  else{return 0;}
+  }
+  
+}
+
+/* this function seggregate the measured frequency value into notes
+ * this need to be updated if your flute has other scale than mine (E)
+ * output from this function can be directly plugged to p() function to play it on flute
+ */
+
+int tune()
+{
+  float store[10],temp1,temp2;
+temp1=0;
+  for(int i=0;i<1;i++)
+       {store[i]=fRaw();}
+
+ temp1=(store[0]);
+
+ if(temp1>160 && temp1<170){return E;}
+ if(temp1>177 && temp1<193){return Fs;}
+ if(temp1>200 && temp1<215){return Gs;}
+ if(temp1>212 && temp1<228){return A;}
+ if(temp1>235 && temp1<255){return B;}
+ if(temp1>268 && temp1<288){return Cs;}
+ if(temp1>298 && temp1<320){return Ds;}
+ if(temp1>320 && temp1<340){return E2;}
+ if(temp1>360 && temp1<380){return Fs2;}
+ if(temp1>400 && temp1<425){return Gs2;}
+ if(temp1==0){return 0;}
+}
