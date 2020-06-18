@@ -1,0 +1,518 @@
+const int pump=10;
+const int solenoid_air_control=9;
+const int solenoid_1=8;
+const int solenoid_2=7;
+const int solenoid_3=6;
+const int solenoid_4=5;
+const int solenoid_5=4;
+const int solenoid_6=3;
+const int solenoid_7=2;
+
+ 
+ 
+
+void setup() {
+  pinMode(pump,OUTPUT);
+  pinMode(solenoid_air_control,OUTPUT);
+  pinMode(solenoid_1,OUTPUT);
+  pinMode(solenoid_2,OUTPUT);
+  pinMode(solenoid_3,OUTPUT);
+  pinMode(solenoid_4,OUTPUT);
+  pinMode(solenoid_5,OUTPUT);
+  pinMode(solenoid_6,OUTPUT);
+  pinMode(solenoid_7,OUTPUT);
+}
+
+
+
+void loop() {
+  digitalWrite(pump,HIGH);
+  delay(2000);
+  digitalWrite(pump,LOW);
+  delay(2000);
+  
+  la();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+  
+  la();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  si-b();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  do();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  do();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  si-b();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  la();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  sol();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  fa();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  fa();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+  
+  sol();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  la();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  la();
+  delay(3000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  sol();
+  delay(1000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+  
+  sol();
+  delay(4000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+/* première ligne */
+
+  
+  la();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+  
+  la();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  si-b();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  do();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  do();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  si-b();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  la();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  sol();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  fa();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  fa();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+  
+  sol();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  la();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  sol();
+  delay(3000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  fa();
+  delay(1000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+  
+  fa();
+  delay(4000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+/* deuxième ligne */
+
+  sol();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  sol();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  la();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  fa();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  sol();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  la();
+  delay(1000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  si-b();
+  delay(1000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  la();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  fa();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  sol();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+  
+  la();
+  delay(1000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  si-b();
+  delay(1000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  la();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  sol();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  fa();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  sol();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  Do-grave();
+  delay(4000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+/* troisième ligne */
+
+    la();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+  
+  la();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  si-b();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  do();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  do();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  si-b();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  la();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  sol();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  fa();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  fa();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+  
+  sol();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  la();
+  delay(2000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  sol();
+  delay(3000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+  fa();
+  delay(1000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+  
+  fa();
+  delay(4000);
+  digitalWrite(solenoid_air_control,HIGH);
+  delay(1000);
+  digitalWrite(solenoid_air_control,LOW);
+
+}
+
+
+
+Do-grave()
+{
+  digitalWrite(solenoid_1,HIGH);
+  digitalWrite(solenoid_2,HIGH);
+  digitalWrite(solenoid_3,HIGH);
+  digitalWrite(solenoid_4,HIGH);
+  digitalWrite(solenoid_5,HIGH);
+  digitalWrite(solenoid_6,HIGH);
+  digitalWrite(solenoid_7,HIGH);
+
+}
+ré()
+{
+  digitalWrite(solenoid_1,HIGH);
+  digitalWrite(solenoid_2,HIGH);
+  digitalWrite(solenoid_3,HIGH);
+  digitalWrite(solenoid_4,HIGH);
+  digitalWrite(solenoid_5,HIGH);
+  digitalWrite(solenoid_6,HIGH);
+  digitalWrite(solenoid_7,LOW);
+
+}
+
+mi()
+{
+  digitalWrite(solenoid_1,HIGH);
+  digitalWrite(solenoid_2,HIGH);
+  digitalWrite(solenoid_3,HIGH);
+  digitalWrite(solenoid_4,HIGH);
+  digitalWrite(solenoid_5,HIGH);
+  digitalWrite(solenoid_6,LOW);
+  digitalWrite(solenoid_7,LOW);
+
+}
+
+fa()
+{
+  digitalWrite(solenoid_1,HIGH);
+  digitalWrite(solenoid_2,HIGH);
+  digitalWrite(solenoid_3,HIGH);
+  digitalWrite(solenoid_4,HIGH);
+  digitalWrite(solenoid_5,LOW);
+  digitalWrite(solenoid_6,HIGH);
+  digitalWrite(solenoid_7,LOW);
+
+}
+
+sol()
+{
+  digitalWrite(solenoid_1,HIGH);
+  digitalWrite(solenoid_2,HIGH);
+  digitalWrite(solenoid_3,HIGH);
+  digitalWrite(solenoid_4,LOW);
+  digitalWrite(solenoid_5,LOW);
+  digitalWrite(solenoid_6,LOW);
+  digitalWrite(solenoid_7,LOW);
+
+}
+
+la()
+{
+  digitalWrite(solenoid_1,HIGH);
+  digitalWrite(solenoid_2,HIGH);
+  digitalWrite(solenoid_3,LOW);
+  digitalWrite(solenoid_4,LOW);
+  digitalWrite(solenoid_5,LOW);
+  digitalWrite(solenoid_6,LOW);
+  digitalWrite(solenoid_7,LOW);
+}
+
+si-b()
+{
+  digitalWrite(solenoid_1,HIGH);
+  digitalWrite(solenoid_2,LOW);
+  digitalWrite(solenoid_3,HIGH);
+  digitalWrite(solenoid_4,HIGH);
+  digitalWrite(solenoid_5,LOW);
+  digitalWrite(solenoid_6,LOW);
+  digitalWrite(solenoid_7,LOW);
+}
+
+si()
+{
+  digitalWrite(solenoid_1,LOW);
+  digitalWrite(solenoid_2,LOW);
+  digitalWrite(solenoid_3,LOW);
+  digitalWrite(solenoid_4,LOW);
+  digitalWrite(solenoid_5,LOW);
+  digitalWrite(solenoid_6,LOW);
+  digitalWrite(solenoid_7,LOW);
+}
+
+do()
+{
+  digitalWrite(solenoid_1,LOW);
+  digitalWrite(solenoid_2,HIGH);
+  digitalWrite(solenoid_3,LOW);
+  digitalWrite(solenoid_4,LOW);
+  digitalWrite(solenoid_5,LOW);
+  digitalWrite(solenoid_6,LOW);
+  digitalWrite(solenoid_7,LOW);
+}
