@@ -304,8 +304,7 @@ void loop() {
 }
 
 
-
-Do-grave()
+void Dograve()
 {
   digitalWrite(solenoid_1,HIGH);
   digitalWrite(solenoid_2,HIGH);
@@ -316,7 +315,7 @@ Do-grave()
   digitalWrite(solenoid_7,HIGH);
 
 }
-ré()
+void re()
 {
   digitalWrite(solenoid_1,HIGH);
   digitalWrite(solenoid_2,HIGH);
@@ -328,7 +327,7 @@ ré()
 
 }
 
-mi()
+void mi()
 {
   digitalWrite(solenoid_1,HIGH);
   digitalWrite(solenoid_2,HIGH);
@@ -340,7 +339,7 @@ mi()
 
 }
 
-fa()
+void fa()
 {
   digitalWrite(solenoid_1,HIGH);
   digitalWrite(solenoid_2,HIGH);
@@ -352,19 +351,20 @@ fa()
 
 }
 
-fa-d()
+
+void fad()
 {
   digitalWrite(solenoid_1,HIGH);
   digitalWrite(solenoid_2,HIGH);
   digitalWrite(solenoid_3,HIGH);
-  digitalWrite(solenoid_4,LOW);
+  digitalWrite(solenoid_4,HIGH);
   digitalWrite(solenoid_5,HIGH);
   digitalWrite(solenoid_6,HIGH);
   digitalWrite(solenoid_7,LOW);
 
 }
 
-sol()
+void sol()
 {
   digitalWrite(solenoid_1,HIGH);
   digitalWrite(solenoid_2,HIGH);
@@ -376,7 +376,7 @@ sol()
 
 }
 
-la()
+void la()
 {
   digitalWrite(solenoid_1,HIGH);
   digitalWrite(solenoid_2,HIGH);
@@ -387,7 +387,7 @@ la()
   digitalWrite(solenoid_7,LOW);
 }
 
-si-b()
+void sii()
 {
   digitalWrite(solenoid_1,HIGH);
   digitalWrite(solenoid_2,LOW);
@@ -398,9 +398,10 @@ si-b()
   digitalWrite(solenoid_7,LOW);
 }
 
-si()
+
+void si()
 {
-  digitalWrite(solenoid_1,LOW);
+  digitalWrite(solenoid_1,HIGH);
   digitalWrite(solenoid_2,LOW);
   digitalWrite(solenoid_3,LOW);
   digitalWrite(solenoid_4,LOW);
@@ -409,7 +410,7 @@ si()
   digitalWrite(solenoid_7,LOW);
 }
 
-do()
+void doo()
 {
   digitalWrite(solenoid_1,LOW);
   digitalWrite(solenoid_2,HIGH);
